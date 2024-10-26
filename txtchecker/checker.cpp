@@ -58,7 +58,8 @@ void checkAndUpdateFile_CSV(const std::wstring& inputFilename, const std::wstrin
         return;
     }
 
-    std::ofstream outputFile(outputFilename);
+    const std::wstring& csvExtension = L".csv";
+    std::ofstream outputFile(outputFilename + csvExtension);
     if (!outputFile) {
         std::cout << "File does not exist or cannot be opened." << std::endl;
         return;
@@ -115,8 +116,8 @@ void checkAndUpdateFile_TXT(const std::wstring& inputFilename, const std::wstrin
         std::cout << "File does not exist or cannot be opened." << std::endl;
         return;
     }
-
-    std::ofstream outputFile(outputFilename);
+    const std::wstring & txtExtension = L".txt";
+    std::ofstream outputFile(outputFilename + txtExtension);
     if (!outputFile) {
         std::cout << "File does not exist or cannot be opened." << std::endl;
         return;
